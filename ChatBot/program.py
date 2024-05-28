@@ -85,7 +85,7 @@ if prompt := st.chat_input("How can I help you?"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    response = f"Echo: {generate_answer(prompt)}"
+    response = f"{generate_answer(prompt)}"
     with st.chat_message("assistant"):
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
